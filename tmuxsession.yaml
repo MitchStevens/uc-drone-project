@@ -1,0 +1,14 @@
+session_name: cli-interface
+windows:
+- window_name: default
+  layout: tiled
+  panes:
+  - shell_command:
+    - roslaunch kobuki_node minimal.launch
+  - shell_command:
+    - roslaunch kobuki_keyop keyop.launch
+  - shell_command:
+    - rosrun rosserial_python serial_node.py /dev/ttyUSB0
+
+
+
