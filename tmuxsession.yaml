@@ -6,9 +6,11 @@ windows:
   - shell_command:
     - roslaunch kobuki_node minimal.launch
   - shell_command:
-    - roslaunch kobuki_keyop keyop.launch
-  - shell_command:
     - rosrun rosserial_python serial_node.py /dev/ttyUSB0
+  - shell_command:
+    - rostopic echo /object_temperature
+  - shell_command:
+    - roslaunch kobuki_keyop keyop.launch
 
 
 

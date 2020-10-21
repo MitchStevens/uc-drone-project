@@ -3,9 +3,10 @@
 
 ## requirements:
 - python-pip
-- python
-- python-setuptools
-- python-smbus
+- pip install --user python
+- pip install --user python-setuptools
+- pip install --user python-smbus
+- pip install --user tmuxp
 
 ## wifi password
 - ssid: ubiquityrobot148D
