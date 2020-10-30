@@ -2,14 +2,17 @@
 2020 Capstone project
 
 ## Install image
-dd
+- install the image to the sd card. We did this on linux:
+  1. Find the name of the raspberrypi by running `lsblk`.
+  2. Download the raspberrypi ROS image and extract it.
+  3. run `dd bs=8M status=progress if=name-of-ubuntu-image.img of=/dev/name-of-sd-card`, replacing the input and output files as needed.
 
 ## Log in to RPi
-- password: ubuntu
-- run
-  - `git clone github.com/MitchStevens/uc-drone-project`
+- Hook up the RaspberryPi to a monitor, mouse and keyboard. Provide a wired internet connection and power.
+- Once the RPi boots up, log into the system as "UbuntuUser" with password "ubuntu".
+- Open up the LXTerminal and run the following:
+  - `git clone https://github.com/MitchStevens/uc-drone-project`
   - `cd uc-drone-project`
-  - `sudo make install`
 
 ## Install access point
 - We used the tutorial here: https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md
@@ -19,8 +22,10 @@ dd
   - pass: robotseverywhere
 
 ## Connecting remotely to the RPi
-- we used ssh to communicate with the drone
-- run `ssh ubuntu@ubiquityrobot.local` with password "ubuntu"
+- We used ssh to communicate with the drone
+- Run `ssh ubuntu@ubiquityrobot.local` with password "ubuntu"
+
+
 
 
 
