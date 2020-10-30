@@ -14,25 +14,28 @@
   - `git clone https://github.com/MitchStevens/uc-drone-project`
   - `cd uc-drone-project`
 
-## Install access point
-- We used the tutorial here: https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md
-- run `sudo make install-access-point`
-- After the access point is setup, connect to the new access point:
-  - ssid: ubiquityrobot****
-  - pass: robotseverywhere
+## Install all the necessary software
+- This installation process is split up into 3 parts: `install-access-point`, `install-ros-modules`, and `install-drone interface`. You can install all of these by running `sudo make install`
+- After the installation process is complete, restart the RPi.
 
 ## Connecting remotely to the RPi
-- We used ssh to communicate with the drone
+- After the access point is setup, connect to it with the following credentials:
+  - ssid: ubiquityrobot
+  - pass: robotseverywhere
+- We use ssh to communicate with the drone
 - Run `ssh ubuntu@ubiquityrobot.local` with password "ubuntu"
 
+## Start up the system
+- We are now ready to use the system!
+- Connect the RPi to the Kobuki drone and the Arduino.The Arduino also needs to be connected to sensor. Consult documentation for information on how to connect up all the components.
+- After the RPi starts up, connect remotely to it via ssh.
+- Navigate to the repo with `cd uc-drone-project`
+- Run `make run` to bring up the interface to move it around!
+  - Press 'e' to start up the motors
+  - Use the arrow keys to accelerate and turn around.
+  - press 'd' to stop all motors (very important!)
 
-
-
-
-
-
-
-
-- remember to weight the kabuki to the floor
--  add extra battery pack
-- put additional weight to the systemg
+## Tips
+- Remember to weight the kabuki to the floor
+  - You can use an extra battery pack
+  - We also used a 5kg weight plate to achieve this
