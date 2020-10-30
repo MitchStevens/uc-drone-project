@@ -1,2 +1,0 @@
-tmux splitw
-tmux splitw

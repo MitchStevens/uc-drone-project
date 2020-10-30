@@ -12,7 +12,7 @@ install-access-point:
 	echo "Installing accessing point"
 	apt update
 	apt upgrade
-	$(apt-install) hostapd dnsmask netfilter-persistent iptables-persistent dhcpcd5
+	$(apt-install) hostapd dnsmasq netfilter-persistent iptables-persistent dhcpcd5
 	systemctl unmask hostapd
 	systemctl enable hostapd
 	$(apt-install) netfilter-persistent iptables-persistent

@@ -39,3 +39,4 @@
 - Remember to weight the kabuki to the floor
   - You can use an extra battery pack
   - We also used a 5kg weight plate to achieve this
+- This installation process will take a while, maybe an hour. Be patient!
